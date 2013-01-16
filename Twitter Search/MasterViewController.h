@@ -10,11 +10,13 @@
 
 @interface MasterViewController : UITableViewController {
     
-    NSDictionary* tweets;
+    NSDictionary *tweets;
     
 }
 
-
+@property NSMutableArray *tweetsText;
+@property NSMutableArray *tweetsUsername;
+@property NSMutableArray *userprofilePictures;
 
 - (void) getTweets;
 

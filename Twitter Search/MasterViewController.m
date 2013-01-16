@@ -56,7 +56,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return results.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -128,16 +128,27 @@
         
         // Using the NSJSONSerialization class to convert JSON to Foundation objects and vice versa
         // JSONObjectWithData returns Foundation object from given JSON data
-        // Foundation Objects formed are stored in the "tweets" Dictionary which is a Dictionary or Dictionaries
+        // Foundation Objects formed are stored in the "tweets" Dictionary which is a Dictionary of Dictionaries
         tweets = [NSJSONSerialization JSONObjectWithData:tweetdata
                                       options:kNilOptions
                                       error:&parseError];
         
         results = [tweets objectForKey:@"results"];
         
-        // print all raw tweets into console
+        // Print all raw tweets into console
         for (int i = 0; i < [results count]; i ++) {
             NSLog(@"Contents of Tweet# %d are %@",i, [results objectAtIndex:i]);
+        }
+        
+        // Initializing our properties
+        self.tweetsText = [[NSMutableArray alloc]init];
+        self.tweetsUsername = [[NSMutableArray alloc] init];
+        
+        // Filling in the info regarding tweets by iterating through "results"
+        for (NSDictionary *dictionary in results) {
+            
+            [self.tweetsText addObject:[dictionary objectForKey:@"text"]];
+            [self.tweetsUsername addObject:[dictionary objectForKey:@"from_user"]];
         }
         
         // Update the tableview in the main thread after the JSON data fetch is completed
@@ -146,8 +157,6 @@
             [self.tableView reloadData];
             
         });
-        
-        
         
         
     });
