@@ -12,6 +12,8 @@
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
+    // Holds all tweets with individual tweets in the form of a NSDictionary, located at individual indices 
+    NSArray *results;
 }
 @end
 
@@ -131,6 +133,7 @@
                                       options:kNilOptions
                                       error:&parseError];
         
+        results = [tweets objectForKey:@"results"];
         
         // Update the tableview in the main thread after the JSON data fetch is completed
         dispatch_async(dispatch_get_main_queue(), ^{
