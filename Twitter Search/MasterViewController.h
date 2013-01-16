@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController {
+    
+    NSDictionary* tweets;
+    
+}
 
-// initial commit
+
+
+- (void) getTweets;
 
 @end

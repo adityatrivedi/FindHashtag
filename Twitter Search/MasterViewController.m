@@ -30,6 +30,8 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    [self getTweets];
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +110,40 @@
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+
+#pragma mark - custom methods
+
+- (void) getTweets {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        //Returns a JSON data object containing the data from the location specified by the URL.
+        NSData *tweetdata = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://search.twitter.com/search.json?q=DaveMustaine&rpp=100"]];
+        
+        NSError *parseError = nil;
+        
+        // Using the NSJSONSerialization class to convert JSON to Foundation objects and vice versa
+        // JSONObjectWithData returns Foundation object from given JSON data
+        // Foundation Objects formed are stored in the "tweets" Dictionary which is a Dictionary or Dictionaries
+        tweets = [NSJSONSerialization JSONObjectWithData:tweetdata
+                                      options:kNilOptions
+                                      error:&parseError];
+        
+        
+        // Update the tableview in the main thread after the JSON data fetch is completed
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tableView reloadData];
+            
+        });
+        
+        
+        
+        
+    });
+    
 }
 
 @end
