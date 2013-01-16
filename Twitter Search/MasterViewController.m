@@ -135,6 +135,11 @@
         
         results = [tweets objectForKey:@"results"];
         
+        // print all raw tweets into console
+        for (int i = 0; i < [results count]; i ++) {
+            NSLog(@"Contents of Tweet# %d are %@",i, [results objectAtIndex:i]);
+        }
+        
         // Update the tableview in the main thread after the JSON data fetch is completed
         dispatch_async(dispatch_get_main_queue(), ^{
             
