@@ -66,12 +66,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellName = @"Tweet";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
+    static NSString *cellName = @"TweetCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     
-    // if no cells exist then create them
+    // If no cells exist then create them
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
+    
+    // Assigning cell labels the tweet text and the associated username
+    cell.textLabel.text = [self.tweetsText objectAtIndex: [indexPath row]];
+    cell.detailTextLabel.text = [self.tweetsUsername objectAtIndex:[indexPath row]];
     
     return cell;
 }
