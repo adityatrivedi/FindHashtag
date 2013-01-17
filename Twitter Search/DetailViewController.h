@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
+@property (weak, nonatomic) IBOutlet UILabel *username;
+@property (weak, nonatomic) IBOutlet UITextView *tweetText;
+
 @end

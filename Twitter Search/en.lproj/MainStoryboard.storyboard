@@ -82,38 +82,42 @@
                                     <constraint firstAttribute="width" constant="118" id="fzT-mP-XM8"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTS-7I-YLm">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="5D5-vP-NYf"/>
-                                    <constraint firstAttribute="width" constant="240" id="nxk-Nf-TxE"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3K-7I-qPf">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="3U9-Nu-5oK"/>
                                     <constraint firstAttribute="height" constant="234" id="QJF-MU-hJw"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSy-pd-qtl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="J2u-lv-uBf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="f3K-7I-qPf" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="3CE-bH-SZs"/>
-                            <constraint firstItem="KTS-7I-YLm" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="3Hi-Wj-GYR"/>
-                            <constraint firstItem="KTS-7I-YLm" firstAttribute="top" secondItem="ODB-PV-f4N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5Hm-Hw-h0y"/>
-                            <constraint firstItem="f3K-7I-qPf" firstAttribute="trailing" secondItem="KTS-7I-YLm" secondAttribute="trailing" type="default" id="Efw-K4-jSU"/>
-                            <constraint firstItem="f3K-7I-qPf" firstAttribute="leading" secondItem="KTS-7I-YLm" secondAttribute="leading" type="default" id="HUw-hc-XtI"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Hvj-HN-fUl"/>
-                            <constraint firstItem="KTS-7I-YLm" firstAttribute="centerX" secondItem="ODB-PV-f4N" secondAttribute="centerX" type="default" id="zNk-ZT-WRS"/>
+                            <constraint firstItem="f3K-7I-qPf" firstAttribute="centerX" secondItem="oSy-pd-qtl" secondAttribute="centerX" type="default" id="97E-TW-Se7"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="top" secondItem="22" secondAttribute="top" constant="14" id="Izg-ED-TmJ"/>
+                            <constraint firstItem="oSy-pd-qtl" firstAttribute="top" secondItem="ODB-PV-f4N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VPV-ds-lpT"/>
+                            <constraint firstItem="oSy-pd-qtl" firstAttribute="trailing" secondItem="ODB-PV-f4N" secondAttribute="trailing" type="default" id="WQ5-XH-Bqi"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="leading" secondItem="oSy-pd-qtl" secondAttribute="leading" type="default" id="bgf-np-9IK"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="c95-cX-MYK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tweet Details" id="26"/>
+                    <connections>
+                        <outlet property="profilePicture" destination="ODB-PV-f4N" id="ePB-V5-TlM"/>
+                        <outlet property="tweetText" destination="f3K-7I-qPf" id="Qbh-Rf-3jf"/>
+                        <outlet property="username" destination="oSy-pd-qtl" id="1QD-Mx-GUm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +128,9 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profilePicture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tweetText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="username" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MasterViewController" superclassName="UITableViewController">
