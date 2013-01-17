@@ -103,13 +103,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="f3K-7I-qPf" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="3CE-bH-SZs"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="4c5-1m-fOd"/>
                             <constraint firstItem="f3K-7I-qPf" firstAttribute="centerX" secondItem="oSy-pd-qtl" secondAttribute="centerX" type="default" id="97E-TW-Se7"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="top" secondItem="22" secondAttribute="top" constant="14" id="Izg-ED-TmJ"/>
-                            <constraint firstItem="oSy-pd-qtl" firstAttribute="top" secondItem="ODB-PV-f4N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VPV-ds-lpT"/>
+                            <constraint firstItem="oSy-pd-qtl" firstAttribute="top" secondItem="ODB-PV-f4N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="S4T-cw-liY"/>
                             <constraint firstItem="oSy-pd-qtl" firstAttribute="trailing" secondItem="ODB-PV-f4N" secondAttribute="trailing" type="default" id="WQ5-XH-Bqi"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Xsd-XD-yer"/>
                             <constraint firstItem="ODB-PV-f4N" firstAttribute="leading" secondItem="oSy-pd-qtl" secondAttribute="leading" type="default" id="bgf-np-9IK"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="c95-cX-MYK"/>
+                            <constraint firstItem="f3K-7I-qPf" firstAttribute="top" secondItem="22" secondAttribute="top" constant="218" id="yMq-Ba-1ak"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tweet Details" id="26"/>
