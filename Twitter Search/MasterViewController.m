@@ -116,6 +116,7 @@
         
         [segue.destinationViewController setTweetTextDetailItem:[self.tweetsText objectAtIndex:[indexPath row]]];
         [segue.destinationViewController setUsernameDetailItem: [self.tweetsUsername objectAtIndex:[indexPath row]]];
+        [segue.destinationViewController setProfilePictureDetailItem:[self.userprofilePictures objectAtIndex:[indexPath row]]];
         
     }
 }
@@ -147,14 +148,16 @@
         }
         
         // Initializing our properties
-        self.tweetsText = [[NSMutableArray alloc]init];
+        self.tweetsText = [[NSMutableArray alloc] init];
         self.tweetsUsername = [[NSMutableArray alloc] init];
+        self.userprofilePictures = [[NSMutableArray alloc] init];
         
         // Filling in the info regarding tweets by iterating through "results"
         for (NSDictionary *dictionary in results) {
             
             [self.tweetsText addObject:[dictionary objectForKey:@"text"]];
             [self.tweetsUsername addObject:[dictionary objectForKey:@"from_user"]];
+            [self.userprofilePictures addObject:[dictionary objectForKey:@"profile_image_url"]];
         }
         
         // Update the tableview in the main thread after the JSON data fetch is completed
@@ -163,7 +166,6 @@
             [self.tableView reloadData];
             
         });
-        
         
     });
     

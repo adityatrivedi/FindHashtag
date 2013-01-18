@@ -21,30 +21,48 @@
 
 #pragma mark - Managing the detail item
 
-
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
     if (self.tweetTextDetailItem)
         self.tweetText.text = [self.tweetTextDetailItem description];
     
     if (self.usernameDetailItem)
         self.username.text = [self.usernameDetailItem description];
     
+    if (self.profilePictureDetailItem) {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+           
+            // replacing the "noraml.jpeg" extension of image url with "bigger.jpeg"
+            NSMutableString *imageURL = [[self.profilePictureDetailItem description] mutableCopy];
+            NSRange range;
+            range.location = imageURL.length - 11;
+            range.length = 11;
+            [imageURL deleteCharactersInRange:range];
+            [imageURL insertString:@"bigger.jpeg" atIndex:imageURL.length];
+            
+            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.profilePicture.image = [UIImage imageWithData:data];
+            });
+            
+        });
+        
+    }
+    
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
