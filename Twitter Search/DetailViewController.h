@@ -10,7 +10,9 @@
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) id tweetTextDetailItem;
+@property (strong, nonatomic) id usernameDetailItem;
+@property (strong, nonatomic) id profilePictureDetailItem;
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (weak, nonatomic) IBOutlet UILabel *username;

@@ -111,10 +111,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showTweet"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        
+        [segue.destinationViewController setTweetTextDetailItem:[self.tweetsText objectAtIndex:[indexPath row]]];
+        [segue.destinationViewController setUsernameDetailItem: [self.tweetsUsername objectAtIndex:[indexPath row]]];
+        
     }
 }
 
