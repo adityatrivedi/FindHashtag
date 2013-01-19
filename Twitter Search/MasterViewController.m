@@ -135,6 +135,9 @@
 
 - (void) getTweets {
     
+    // Enable spinning network activity indicator
+    NSLog(@"Network Activity Indicator Enabled");
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         //Returns a JSON data object containing the data from the location specified by the URL.
@@ -173,7 +176,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             [self.tableView reloadData];
-            
+            // Once data has been loaded into the table view, hide the network activity indicator
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            NSLog(@"Network Activity Indicator Disabled");
         });
         
     });
