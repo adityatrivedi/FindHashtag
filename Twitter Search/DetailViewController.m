@@ -79,6 +79,9 @@
 {
     [super viewDidLoad];
     [self configureView];
+    // Setting background image
+//    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"detailBackground.jpg"]];
+    
 }
 
 - (void)didReceiveMemoryWarning

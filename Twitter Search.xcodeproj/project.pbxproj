@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003F99E216AA646400EF05D3 /* detailBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 003F99E116AA646400EF05D3 /* detailBackground.jpg */; };
 		0061C9B216A6531F006DF4BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0061C9B116A6531F006DF4BC /* UIKit.framework */; };
 		0061C9B416A6531F006DF4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0061C9B316A6531F006DF4BC /* Foundation.framework */; };
 		0061C9B616A6531F006DF4BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0061C9B516A6531F006DF4BC /* CoreGraphics.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003F99E116AA646400EF05D3 /* detailBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = detailBackground.jpg; sourceTree = "<group>"; };
 		0061C9AD16A6531F006DF4BC /* Twitter Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0061C9B116A6531F006DF4BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0061C9B316A6531F006DF4BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,9 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003F99DF16AA644C00EF05D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				003F99E116AA646400EF05D3 /* detailBackground.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		0061C9A216A6531E006DF4BC = {
 			isa = PBXGroup;
 			children = (
+				003F99DF16AA644C00EF05D3 /* Resources */,
 				0061C9B716A6531F006DF4BC /* Twitter Search */,
 				0061C9B016A6531F006DF4BC /* Frameworks */,
 				0061C9AE16A6531F006DF4BC /* Products */,
@@ -168,6 +179,7 @@
 				0061C9C616A6531F006DF4BC /* Default@2x.png in Resources */,
 				0061C9C816A6531F006DF4BC /* Default-568h@2x.png in Resources */,
 				0061C9CB16A6531F006DF4BC /* MainStoryboard.storyboard in Resources */,
+				003F99E216AA646400EF05D3 /* detailBackground.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,7 @@
 				0061C9D616A6531F006DF4BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
