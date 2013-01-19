@@ -83,6 +83,15 @@
     return NO;
 }
 
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row & 1)
+        cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    
+    else
+        cell.backgroundColor = [UIColor whiteColor];
+    
+}
 //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 //    if (editingStyle == UITableViewCellEditingStyleDelete) {
