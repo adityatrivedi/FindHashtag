@@ -33,13 +33,34 @@
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
            
-            // replacing the "noraml.jpeg" extension of image url with "bigger.jpeg"
+            // replacing the "normal.jpeg"/"normal.jpeg"/"normal.jpeg" extension of image url with "bigger.jpeg"
             NSMutableString *imageURL = [[self.profilePictureDetailItem description] mutableCopy];
             NSRange range;
-            range.location = imageURL.length - 11;
-            range.length = 11;
-            [imageURL deleteCharactersInRange:range];
-            [imageURL insertString:@"bigger.jpeg" atIndex:imageURL.length];
+
+            if ([[imageURL substringFromIndex:(imageURL.length - 3)] isEqualToString: @"png"]) {
+                range.location = imageURL.length - 10;
+                range.length = 10;
+                [imageURL deleteCharactersInRange:range];
+                [imageURL insertString:@"bigger.png" atIndex:imageURL.length];
+                NSLog(@"IMAGE URL: %@",imageURL);
+            }
+            
+            else if ([[imageURL substringFromIndex:(imageURL.length - 3)] isEqualToString: @"jpg"]) {
+                
+                range.location = imageURL.length - 10;
+                range.length = 10;
+                [imageURL deleteCharactersInRange:range];
+                [imageURL insertString:@"bigger.jpg" atIndex:imageURL.length];
+                
+                NSLog(@"IMAGE URL: %@",imageURL);
+            }
+            
+            else{
+                range.location = imageURL.length - 11;
+                range.length = 11;
+                [imageURL deleteCharactersInRange:range];
+                [imageURL insertString:@"bigger.jpeg" atIndex:imageURL.length];
+            }
             
             NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
             
