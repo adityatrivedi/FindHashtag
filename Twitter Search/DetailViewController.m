@@ -80,7 +80,7 @@
     [super viewDidLoad];
     [self configureView];
     // Setting background image
-//    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"detailBackground.jpg"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     
 }
 
