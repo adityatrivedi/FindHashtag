@@ -29,7 +29,18 @@
     [super viewDidLoad];
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
+    // Create an UIRefreshControl instance
+    UIRefreshControl *contentRefreshControl = [[UIRefreshControl alloc] init];
+    [contentRefreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
+    // Hooking up the referesh control instance to the tableview
+    self.refreshControl = contentRefreshControl;
+    
     // Fetch the tweets once the view is loaded
+    [self getTweets];
+}
+
+- (void) handleRefresh :(id)sender {
+    
     [self getTweets];
 }
 
@@ -141,7 +152,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         //Returns a JSON data object containing the data from the location specified by the URL.
-        NSData *tweetdata = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://search.twitter.com/search.json?q=DaveMustaine&rpp=100"]];
+        NSData *tweetdata = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://search.twitter.com/search.json?q=barackobama&rpp=100"]];
         
         NSError *parseError = nil;
         
@@ -179,6 +190,8 @@
             // Once data has been loaded into the table view, hide the network activity indicator
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             NSLog(@"Network Activity Indicator Disabled");
+            // Stop the pull down refresh animation after the new data has been loaded
+            [[ self refreshControl] endRefreshing];
         });
         
     });
