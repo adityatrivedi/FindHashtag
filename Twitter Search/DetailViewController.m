@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -66,6 +67,8 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.profilePicture.image = [UIImage imageWithData:data];
+                
+                
             });
             
         });
@@ -75,6 +78,8 @@
     
 }
 
+
+#pragma mark -
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -83,7 +88,8 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     // TextView's background is set to be clear
     self.tweetText.backgroundColor = [UIColor clearColor];
-    
+    // Giving a border to the ImageView
+
 }
 
 - (void)didReceiveMemoryWarning

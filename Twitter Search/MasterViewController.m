@@ -34,14 +34,18 @@
     [contentRefreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
     // Hooking up the referesh control instance to the tableview
     self.refreshControl = contentRefreshControl;
-    
+    contentRefreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh Tweets"];
     // Fetch the tweets once the view is loaded
     [self getTweets];
 }
 
-- (void) handleRefresh :(id)sender {
+- (void) handleRefresh :(UIRefreshControl *)refreshView {
     
     [self getTweets];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM d, h:mm a"];
+    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",[formatter stringFromDate:[NSDate date]]];
+    refreshView.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
 }
 
 - (void)didReceiveMemoryWarning
