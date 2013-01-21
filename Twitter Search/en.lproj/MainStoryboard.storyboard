@@ -89,7 +89,7 @@
                                     <constraint firstAttribute="height" constant="234" id="QJF-MU-hJw"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.20237327294192031" green="0.5858236714186007" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31707360460275175" green="0.30003059426125245" blue="0.35222061820652173" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -99,7 +99,7 @@
                                     <constraint firstAttribute="height" constant="28" id="J2u-lv-uBf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                <color key="textColor" red="0.14067143908771884" green="0.46619675642910496" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.39988111413043481" green="0.38189778182318601" blue="0.38785412283895049" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </label>
                         </subviews>
