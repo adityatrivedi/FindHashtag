@@ -86,8 +86,7 @@
 {
     [super viewDidLoad];
     [self configureView];
-    // Setting background image
-    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
+    
     // TextView's background is set to be clear
     self.tweetText.backgroundColor = [UIColor clearColor];
 }

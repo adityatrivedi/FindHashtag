@@ -76,6 +76,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYw-Qh-oRW">
+                                <color key="backgroundColor" red="0.31640625" green="0.31640625" blue="0.31640625" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="KK0-Ae-MJe"/>
+                                    <constraint firstAttribute="width" constant="132" id="eii-S5-pZh"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODB-PV-f4N">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="2JL-Ti-Xxa"/>
@@ -105,12 +112,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.68023586088477128" green="0.6822988197809805" blue="0.70892068614130432" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="aYw-Qh-oRW" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8dM-xl-kbY"/>
                             <constraint firstItem="f3K-7I-qPf" firstAttribute="centerX" secondItem="oSy-pd-qtl" secondAttribute="centerX" type="default" id="97E-TW-Se7"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="Bb5-bh-D1n"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="leading" secondItem="oSy-pd-qtl" secondAttribute="leading" type="default" id="Ov7-6P-Wta"/>
-                            <constraint firstItem="oSy-pd-qtl" firstAttribute="top" secondItem="ODB-PV-f4N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="S4T-cw-liY"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Xsd-XD-yer"/>
-                            <constraint firstItem="ODB-PV-f4N" firstAttribute="trailing" secondItem="oSy-pd-qtl" secondAttribute="trailing" type="default" id="uKX-P7-7Ws"/>
+                            <constraint firstItem="oSy-pd-qtl" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="9WC-Yh-Ud4"/>
+                            <constraint firstItem="oSy-pd-qtl" firstAttribute="top" secondItem="aYw-Qh-oRW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DEP-nU-2B1"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="centerY" secondItem="aYw-Qh-oRW" secondAttribute="centerY" type="default" id="Qk6-BU-3CE"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="centerX" secondItem="aYw-Qh-oRW" secondAttribute="centerX" type="default" id="SbG-eA-Hp2"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="trailing" secondItem="oSy-pd-qtl" secondAttribute="trailing" type="default" id="cd5-hi-Fdf"/>
+                            <constraint firstItem="ODB-PV-f4N" firstAttribute="leading" secondItem="oSy-pd-qtl" secondAttribute="leading" type="default" id="nIr-0z-DMM"/>
                             <constraint firstItem="f3K-7I-qPf" firstAttribute="top" secondItem="22" secondAttribute="top" constant="218" id="yMq-Ba-1ak"/>
                         </constraints>
                     </view>
