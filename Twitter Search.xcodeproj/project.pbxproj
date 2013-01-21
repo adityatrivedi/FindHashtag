@@ -42,6 +42,7 @@
 		0061C9CD16A6531F006DF4BC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		0061C9CF16A6531F006DF4BC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		0061C9D016A6531F006DF4BC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		00A75F1816ACEF05000144FD /* StyleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 				0061C9CD16A6531F006DF4BC /* MasterViewController.m */,
 				0061C9CF16A6531F006DF4BC /* DetailViewController.h */,
 				0061C9D016A6531F006DF4BC /* DetailViewController.m */,
+				00A75F1816ACEF05000144FD /* StyleConstants.h */,
 				0061C9B816A6531F006DF4BC /* Supporting Files */,
 			);
 			path = "Twitter Search";

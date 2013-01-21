@@ -103,7 +103,7 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.68023586088477128" green="0.6822988197809805" blue="0.70892068614130432" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="f3K-7I-qPf" firstAttribute="centerX" secondItem="oSy-pd-qtl" secondAttribute="centerX" type="default" id="97E-TW-Se7"/>
                             <constraint firstItem="ODB-PV-f4N" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="Bb5-bh-D1n"/>

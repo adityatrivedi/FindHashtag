@@ -10,6 +10,8 @@
 
 #import "DetailViewController.h"
 
+#import "StyleConstants.h"
+
 @interface MasterViewController () {
     NSMutableArray *_objects;
     // Holds all tweets with individual tweets in the form of a NSDictionary, located at individual indices 
@@ -37,6 +39,10 @@
     contentRefreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh Tweets"];
     // Fetch the tweets once the view is loaded
     [self getTweets];
+    
+    
+    self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x777171);//(0xABA4A4);
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void) handleRefresh :(UIRefreshControl *)refreshView {
