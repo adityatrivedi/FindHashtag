@@ -43,7 +43,7 @@
                 range.length = 10;
                 [imageURL deleteCharactersInRange:range];
                 [imageURL insertString:@"bigger.png" atIndex:imageURL.length];
-                NSLog(@"IMAGE URL: %@",imageURL);
+                NSLog(@"IMAGE URL (PNG): %@",imageURL);
             }
             
             else if ([[imageURL substringFromIndex:(imageURL.length - 3)] isEqualToString: @"jpg"]) {
@@ -53,7 +53,7 @@
                 [imageURL deleteCharactersInRange:range];
                 [imageURL insertString:@"bigger.jpg" atIndex:imageURL.length];
                 
-                NSLog(@"IMAGE URL: %@",imageURL);
+                NSLog(@"IMAGE URL (JPG): %@",imageURL);
             }
             
             else{
@@ -61,6 +61,8 @@
                 range.length = 11;
                 [imageURL deleteCharactersInRange:range];
                 [imageURL insertString:@"bigger.jpeg" atIndex:imageURL.length];
+                
+                NSLog(@"IMAGE URL (JPEG): %@", imageURL);
             }
             
             NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
@@ -88,8 +90,6 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     // TextView's background is set to be clear
     self.tweetText.backgroundColor = [UIColor clearColor];
-    // Giving a border to the ImageView
-
 }
 
 - (void)didReceiveMemoryWarning
