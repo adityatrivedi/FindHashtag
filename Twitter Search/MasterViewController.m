@@ -7,9 +7,7 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
-
 #import "StyleConstants.h"
 
 @interface MasterViewController () {
@@ -147,6 +145,8 @@
         [segue.destinationViewController setTweetTextDetailItem:[self.tweetsText objectAtIndex:[indexPath row]]];
         [segue.destinationViewController setUsernameDetailItem: [self.tweetsUsername objectAtIndex:[indexPath row]]];
         [segue.destinationViewController setProfilePictureDetailItem:[self.userprofilePictures objectAtIndex:[indexPath row]]];
+        [segue.destinationViewController setTimeTheTweetWasCreatedDetailedItem:[self.timeTheTweetWasCreated objectAtIndex:[indexPath row]]];
+//        [segue.destinationViewController setUserIdDetailItem:[self.tweetsUserID objectAtIndex:[indexPath row]]];
         
     }
 }
@@ -184,6 +184,8 @@
         self.tweetsText = [[NSMutableArray alloc] init];
         self.tweetsUsername = [[NSMutableArray alloc] init];
         self.userprofilePictures = [[NSMutableArray alloc] init];
+        self.timeTheTweetWasCreated = [[NSMutableArray alloc] init];
+//        self.tweetsUserID = [[NSMutableArray alloc] init];
         
         // Filling in the info regarding tweets by iterating through "results"
         for (NSDictionary *dictionary in results) {
@@ -191,6 +193,8 @@
             [self.tweetsText addObject:[dictionary objectForKey:@"text"]];
             [self.tweetsUsername addObject:[dictionary objectForKey:@"from_user"]];
             [self.userprofilePictures addObject:[dictionary objectForKey:@"profile_image_url"]];
+            [self.timeTheTweetWasCreated addObject:[dictionary objectForKey:@"created_at"]];
+//            [self.tweetsUserID addObject:[dictionary objectForKey:@"FULL NAME OF THE USER"]];
         }
         
         // Update the tableview in the main thread after the JSON data fetch is completed

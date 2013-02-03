@@ -28,7 +28,10 @@
         self.tweetText.text = [self.tweetTextDetailItem description];
     
     if (self.usernameDetailItem)
-        self.username.text = [self.usernameDetailItem description];
+        self.username.text = [@"" stringByAppendingFormat:@"@%@",[self.usernameDetailItem description]] ;
+    
+    if (self.timeTheTweetWasCreatedDetailedItem)
+        self.timeTheTweetWasCreated.text = [self.timeTheTweetWasCreatedDetailedItem description];
     
     if (self.profilePictureDetailItem) {
         
@@ -69,8 +72,6 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.profilePicture.image = [UIImage imageWithData:data];
-                
-                
             });
             
         });

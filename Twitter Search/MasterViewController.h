@@ -17,6 +17,8 @@
 @property NSMutableArray *tweetsText;
 @property NSMutableArray *tweetsUsername;
 @property NSMutableArray *userprofilePictures;
+@property NSMutableArray *timeTheTweetWasCreated;
+//@property NSMutableArray *tweetsUserID;
 
 - (void) getTweets;
 
