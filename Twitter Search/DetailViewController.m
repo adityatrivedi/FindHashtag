@@ -18,6 +18,7 @@
 @synthesize tweetTextDetailItem = _tweetTextDetailItem;
 @synthesize usernameDetailItem = _usernameDetailItem;
 @synthesize profilePictureDetailItem = _profilePictureDetailItem;
+@synthesize tweetText = _tweetText;
 
 
 #pragma mark - Managing the detail item
@@ -88,9 +89,18 @@
     [super viewDidLoad];
     [self configureView];
     
-    // TextView's background is set to be clear
     self.tweetText.backgroundColor = [UIColor clearColor];
+    
+    CGRect frame = self.tweetText.frame;
+    frame.size.height = self.tweetText.contentSize.height;
+    self.tweetText.frame = frame;
+    
+    CGRect dateFrame = CGRectMake(self.timeTheTweetWasCreated.frame.origin.x, CGRectGetMaxY(self.tweetText.frame) + 10, self.timeTheTweetWasCreated.frame.size.width,self.timeTheTweetWasCreated.frame.size.height);
+    self.timeTheTweetWasCreated.frame = dateFrame;
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
