@@ -32,7 +32,7 @@
         self.username.text = [@"" stringByAppendingFormat:@"@%@",[self.usernameDetailItem description]] ;
     
     if (self.timeTheTweetWasCreatedDetailedItem)
-        self.timeTheTweetWasCreated.text = [self.timeTheTweetWasCreatedDetailedItem description];
+        self.timeTheTweetWasCreated.text = [[self.timeTheTweetWasCreatedDetailedItem description] substringToIndex:[self.timeTheTweetWasCreatedDetailedItem description].length - 6];
     
     if (self.profilePictureDetailItem) {
         
